@@ -18,4 +18,7 @@ print(hand); // Should print [1]
 
 void DrawCard(List<int> hand, List<int> deck){
 
+  hand.add(DealCard(deck));
+
+
 }

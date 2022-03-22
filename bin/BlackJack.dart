@@ -8,7 +8,15 @@ import 'package:BlackJack/lib.dart';
 void main() {
 
 
-  Welcome();
+  PlaceBet(BuyIn());
+
+List<int> playerHand = [];
+List<int> houseHand = [];
+Welcome();
+ShuffledDeck();
+InitialDeal(playerHand, houseHand, ShuffledDeck());
+Status(playerHand, houseHand);
+
 
 
 }

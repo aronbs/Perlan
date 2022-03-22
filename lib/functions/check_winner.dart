@@ -17,4 +17,19 @@ import 'package:BlackJack/functions/functions.dart';
 
 int CheckWinner(List<int> playerHand, List<int> houseHand, int currentBankRoll, int currentBet){
 
+  if(CheckIfBusted(playerHand) == true){
+    currentBankRoll -= currentBet;
+    print('You lose');
+  }
+  else if(CheckIfBusted(playerHand) == false && CheckIfBusted(houseHand) == false && CalculateScore(playerHand) > CalculateScore(houseHand)){
+    currentBankRoll += currentBet;
+    print('You win');
+  }
+  else if(CheckIfBusted(playerHand) == true && CheckIfBusted(houseHand) == true){
+    print('Nobody wins');
+
+  }
+
+
+
 }

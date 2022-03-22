@@ -1,3 +1,5 @@
+import 'package:BlackJack/functions/functions.dart';
+
 import 'functions/score_function.dart';
 import 'functions/card_namer.dart';
 import 'functions/deal_card.dart';
@@ -18,5 +20,18 @@ show the score of the house.
  */
 
 void HousePlays(List<int> houseHand, List<int> deck){
+
+  for(int i = 0; i< houseHand.length; i++){
+    CardNamer(houseHand[i]);
+  }
+  print('The Dealer plays');
+
+
+
+  while(CalculateScore(houseHand) < 17){
+    DealCard(houseHand);
+  }
+  print('Dealer has ${CalculateScore(houseHand)}');
+
 
 }

@@ -1,4 +1,5 @@
 import 'draw_card.dart';
+import 'deal_card.dart';
 
 /*
 Create a function called InitialDeal. This function should accept THREE lists
@@ -23,5 +24,11 @@ print(dealerHand); // Should print [2, 4]
  */
 
 void InitialDeal(List<int> playerHand, List<int> houseHand, List<int> deck){
+
+  for(int i = 0; i < 2; i++){
+    playerHand.add(DealCard(deck));
+    houseHand.add(DealCard(deck));
+  }
+
 
 }
