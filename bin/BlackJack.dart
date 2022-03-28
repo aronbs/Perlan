@@ -8,7 +8,7 @@ import 'package:BlackJack/lib.dart';
 void main() {
 
 
-  PlaceBet(BuyIn());
+ // PlaceBet(BuyIn());
 
 List<int> playerHand = [];
 List<int> houseHand = [];
